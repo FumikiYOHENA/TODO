@@ -33,6 +33,17 @@ body {
   box-shadow: var(--shadow);
 }
 
+header {
+  text-align: center;
+}
+
+header .logo {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
 header h1 {
   margin: 0 0 1rem;
   font-weight: 600;
