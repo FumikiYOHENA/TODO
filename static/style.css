@@ -1,0 +1,58 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  transition: background 0.3s, color 0.3s;
+}
+
+:root {
+  --accent: #0070f3;
+  --bg: #fff;
+  --fg: #333;
+}
+
+body.dark {
+  --bg: #1a1a1a;
+  --fg: #eee;
+}
+
+header, footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+#new-task {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.task-item.completed label {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TODO App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header>
+    <h1>TODO</h1>
+    <button id="theme-toggle">🌙</button>
+  </header>
+
+  <main>
+    <form id="new-task-form">
+      <input id="new-task" type="text" placeholder="+ 新しいタスクを追加" autocomplete="off" />
+    </form>
+    <ul id="task-list"></ul>
+  </main>
+
+  <footer>
+    <span id="remaining-count">0 件のタスク</span>
+  </footer>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
