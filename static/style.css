@@ -26,22 +26,14 @@ body {
   pointer-events: none;
 }
 
+
 .app-container {
   max-width: 480px;
   margin: auto;
   padding: 2rem;
-  background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
 }
 
-.glass {
-  background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
+
 
 header {
   text-align: center;
