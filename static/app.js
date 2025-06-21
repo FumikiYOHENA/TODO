@@ -27,9 +27,10 @@ async function deleteTask(id) {
 function renderTasks(tasks) {
   const list = document.getElementById('task-list');
   list.innerHTML = '';
-  tasks.forEach(task => {
+  tasks.forEach((task, index) => {
     const li = document.createElement('li');
     li.className = 'task-item' + (task.completed ? ' completed' : '');
+    li.style.animationDelay = `${index * 0.05}s`;
 
     const label = document.createElement('label');
     const checkbox = document.createElement('input');
@@ -47,6 +48,8 @@ function renderTasks(tasks) {
     del.textContent = '🗑';
     del.className = 'delete-btn';
     del.addEventListener('click', async () => {
+      li.classList.add('delete-animation');
+      await new Promise(resolve => li.addEventListener('animationend', resolve, { once: true }));
       await deleteTask(task.id);
       loadTasks();
     });
