@@ -6,6 +6,7 @@
   --radius: 12px;
   --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   --border: #444;
+  --glow: rgba(212, 175, 55, 0.45);
 }
 
 body {
@@ -14,6 +15,34 @@ body {
   color: var(--fg);
   margin: 0;
   padding: 2rem;
+}
+
+.smoke {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.smoke::before,
+.smoke::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+  filter: blur(60px);
+  animation: smokeMove 60s linear infinite;
+}
+
+.smoke::after {
+  animation-delay: -30s;
 }
 
 .app-container {
@@ -75,7 +104,7 @@ header h1 {
   opacity: 0;
   transform: translateY(10px);
   animation: fadeSlideIn 0.4s forwards;
-  transition: box-shadow 0.3s, background 0.3s, transform 0.3s;
+  transition: box-shadow 0.3s, background 0.3s, transform 0.3s, filter 0.3s;
 }
 
 .task-item label {
@@ -87,6 +116,7 @@ header h1 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   background: rgba(255, 255, 255, 0.05);
   transform: translateY(-2px);
+  filter: drop-shadow(0 0 6px var(--glow));
 }
 
 .task-item.completed label {
@@ -186,4 +216,10 @@ footer {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes smokeMove {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(10%, -5%) rotate(180deg); }
+ 100% { transform: translate(0, 0) rotate(360deg); }
 }
