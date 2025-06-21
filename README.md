@@ -1,6 +1,6 @@
 # TODO App
 
-A minimalist TODO management app focused on a beautiful, modern interface. The UI uses a light color palette with a touch of glassmorphism and refined typography.
+A minimalist TODO management app focused on a beautiful, modern interface. The UI now features a dark palette with luxurious gold accents and subtle purple and navy tones.
 
 ## Features
 

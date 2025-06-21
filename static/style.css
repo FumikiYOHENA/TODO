@@ -1,10 +1,11 @@
 :root {
-  --accent: #7b61ff;
-  --bg: #f5f7fa;
-  --fg: #333;
-  --card-bg: rgba(255, 255, 255, 0.7);
+  --accent: #d4af37;
+  --bg: linear-gradient(135deg, #23182d, #09121d);
+  --fg: #eee;
+  --card-bg: rgba(34, 34, 34, 0.85);
   --radius: 12px;
-  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --border: #444;
 }
 
 body {
@@ -41,7 +42,9 @@ header h1 {
   width: 100%;
   padding: 0.75rem 1rem;
   font-size: 1rem;
-  border: 1px solid #ddd;
+  background: #1a1a1a;
+  color: var(--fg);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   box-sizing: border-box;
 }
@@ -57,7 +60,7 @@ header h1 {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--border);
   opacity: 0;
   transform: translateY(10px);
   animation: fadeSlideIn 0.4s forwards;
@@ -65,14 +68,14 @@ header h1 {
 }
 
 .task-item:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.05);
   transform: translateY(-2px);
 }
 
 .task-item.completed label {
   text-decoration: line-through;
-  color: #999;
+  color: #777;
 }
 
 .delete-btn {
