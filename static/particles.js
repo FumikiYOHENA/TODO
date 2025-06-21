@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+function startParticles() {
   const canvas = document.getElementById('bg-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
@@ -51,4 +51,10 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   animate();
-});
+}
+
+if (document.readyState !== 'loading') {
+  startParticles();
+} else {
+  window.addEventListener('DOMContentLoaded', startParticles);
+}

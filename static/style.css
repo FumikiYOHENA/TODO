@@ -10,7 +10,7 @@
 
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background: var(--bg);
+  background: var(--bg) !important;
   color: var(--fg);
   margin: 0;
   padding: 2rem;
