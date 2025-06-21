@@ -41,7 +41,8 @@
   - タスクカードをホバーすると淡く発光するグロー表現を入れる
     - box-shadow または drop-shadow を用い、transition で滑らかに
   - 背景にはゆったり漂うスモーク風アニメーションを配置
-    - CSSアニメーション＋blur または Canvas API
+    - HTMLに`<div class="smoke"></div>`要素を置き、CSSの`blur`アニメーションで実装
+    - Canvas API版でもよいが、UIを邪魔しないこと
     - 目立ちすぎず幻想的な雰囲気を演出する
 
 ---
