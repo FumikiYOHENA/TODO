@@ -74,14 +74,4 @@ document.getElementById('new-task-form').addEventListener('submit', async e => {
   }
 });
 
-document.getElementById('theme-toggle').addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : '');
-});
-
-(function () {
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark');
-  }
-  loadTasks();
-})();
+loadTasks();
