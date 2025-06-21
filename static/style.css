@@ -43,6 +43,7 @@ header h1 {
   font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: var(--radius);
+  box-sizing: border-box;
 }
 
 #task-list {
