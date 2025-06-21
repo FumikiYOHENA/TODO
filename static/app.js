@@ -45,8 +45,11 @@ function renderTasks(tasks) {
     li.appendChild(label);
 
     const del = document.createElement('button');
-    del.textContent = '🗑';
     del.className = 'delete-btn';
+    const img = document.createElement('img');
+    img.src = '/static/trash.png';
+    img.alt = '削除';
+    del.appendChild(img);
     del.addEventListener('click', async () => {
       li.classList.add('delete-animation');
       await new Promise(resolve => li.addEventListener('animationend', resolve, { once: true }));
