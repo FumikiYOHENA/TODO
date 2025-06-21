@@ -1,39 +1,53 @@
+:root {
+  --accent: #7b61ff;
+  --bg: #f5f7fa;
+  --fg: #333;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --radius: 12px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   background: var(--bg);
   color: var(--fg);
-  transition: background 0.3s, color 0.3s;
+  margin: 0;
+  padding: 2rem;
 }
 
-:root {
-  --accent: #0070f3;
-  --bg: #fff;
-  --fg: #333;
+.app-container {
+  max-width: 480px;
+  margin: auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
-body.dark {
-  --bg: #1a1a1a;
-  --fg: #eee;
+.glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
-header, footer {
-  padding: 1rem;
-  text-align: center;
+header h1 {
+  margin: 0 0 1rem;
+  font-weight: 600;
 }
 
 #new-task {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.75rem 1rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
 }
 
 #task-list {
   list-style: none;
-  margin: 0;
+  margin: 1rem 0;
   padding: 0;
 }
 
@@ -41,8 +55,8 @@ header, footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid #eee;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .task-item.completed label {
@@ -55,4 +69,10 @@ header, footer {
   border: none;
   color: var(--accent);
   cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
 }
